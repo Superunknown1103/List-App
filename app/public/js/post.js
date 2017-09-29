@@ -1,6 +1,27 @@
-
-
-    // When user posts (clicks addBtn)
+   // When the page loads, grab and display all of our chirps
+$.get("/api/all", function(data) {
+    
+      if (data.length !== 0) {
+    
+        for (var i = 0; i < data.length; i++) {
+    
+          var row = $("<div>");
+          row.addClass("post");
+    
+          row.append("<p>" + data[i].author + " data: </p>");
+          row.append("<p>" + data[i].body + "</p>");
+          row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+    
+          $("#post-area").prepend(row);
+    
+        }
+    
+      }
+    
+    });
+    
+   
+   // When user posts (clicks addBtn)
     $("#post-submit").on("click", function(event) {
       event.preventDefault();
     
@@ -33,4 +54,6 @@
       $("#author").val("");
       $("#post-box").val("");
     });
+
+    
     

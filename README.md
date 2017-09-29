@@ -23,6 +23,10 @@
 
 10. Enter post.js, this is where i will define posts. I have created a newPost object taking in a few parameters. This is where I got creative and decided to add a few more features I thought would be useful besides just getting data. I want to know who authored the data, and I want to use moment.js to find out the time it was written.
 
-11. Then I am using jQuery to make an ajax request, which on success, will append our dynamic post object to the page.
+11. Then I am using jQuery to make an ajax request, which on success, will append our data into the console, and onto the page in my post-box.
+
+12. Now my problem is that on refresh, my data which is appending to the page and the console, disappears. That is why I will need to make a get request that will pull the data when I visit the page again and display it. I add this in post.js.
+
+
 
 

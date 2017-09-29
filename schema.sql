@@ -1,7 +1,7 @@
 CREATE DATABASE posts;
 USE posts;
 
-CREATE TABLE `posts` (
+CREATE TABLE `post` (
   "id" Int( 11 ) AUTO_INCREMENT NOT NULL,
   `author` VARCHAR( 255) NOT NULL,
   `body` VARCHAR( 255 ) NOT NULL,
