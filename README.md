@@ -17,6 +17,10 @@
 
 7. Once my dependencies are added, I try to test my code but I realize that I am requring in routes that I have not yet established. So I go and put in a /GET route. Still I am a little confused, since I don't think I need to have a route setup for the app just to show up (the UI at least) on my localhost. After I adding my get route, I was correct, I still have an error and adding the /GET route did not solve my problem. I realize that while copying my folder structure from another project I put everything into the /app folder when in fact I forgot that the schema, package.json, node_modules, and server should be outside (in the main repository), this of course is not necessary and I could re-work it to work with the files being on the inside of the app folder but to follow MVC guidelines it is important to have the files organized in this way.
 
-8. Great, my code is up and running, and I notice I have a nice bootstrap layout, as well as even my first route is done. 
+8. Great, my code is up and running, and I notice I have a nice bootstrap layout, as well as even my first route (/GET) is done. 
+
+9. Welp, now it looks like I need to make a /POST route to add data into my sql database. As with my /GET route, I add in lots of console.log's to avoid code breakage. Ok, now this isn't going to work because the buttons on the front-end don't do anything yet. At least the code doesn't break.
+
+10.
 
 

@@ -7,7 +7,6 @@ var connection = require("../config/connection.js");
 // =============================================================
 module.exports = function(app) {
 
-  // Get all chirps
   app.get("/api/all", function(req, res) {
 
     var dbQuery = "SELECT * FROM posts";
@@ -18,4 +17,18 @@ module.exports = function(app) {
 
   });
 
-};
+app.post("/api/new", function(req, res) {
+    
+        console.log("Post Data:");
+        console.log(req.body);
+    
+        var dbQuery = "INSERT INTO posts (author, body, created_at) VALUES (?,?,?)";
+    
+        connection.query(dbQuery, [req.body.author, req.body.body, req.body.created_at], function(err, result) {
+          console.log("Post Successfully Saved!");
+          res.end();
+        });
+    
+      });
+    
+    };
