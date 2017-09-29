@@ -9,7 +9,7 @@ $.get("/api/all", function(data) {
           row.addClass("post");
     
           row.append("<p>" + data[i].author + " data: </p>");
-          row.append("<p>" + data[i].body + "</p>");
+          row.append("<p>data:" + data[i].body + "</p>");
           row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
     
           $("#post-area").prepend(row);
