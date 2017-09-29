@@ -21,6 +21,8 @@
 
 9. Welp, now it looks like I need to make a /POST route to add data into my sql database. As with my /GET route, I add in lots of console.log's to avoid code breakage. Ok, now this isn't going to work because the buttons on the front-end don't do anything yet. At least the code doesn't break.
 
-10.
+10. Enter post.js, this is where i will define posts. I have created a newPost object taking in a few parameters. This is where I got creative and decided to add a few more features I thought would be useful besides just getting data. I want to know who authored the data, and I want to use moment.js to find out the time it was written.
+
+11. Then I am using jQuery to make an ajax request, which on success, will append our dynamic post object to the page.
 
 
