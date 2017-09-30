@@ -1,4 +1,4 @@
-   // When the page loads, grab and display all of our chirps
+   // When the page loads, grab and display all of our posts
 $.get("/api/all", function(data) {
     
       if (data.length !== 0) {
@@ -20,7 +20,6 @@ $.get("/api/all", function(data) {
     
     });
     
-   
    // When user posts (clicks addBtn)
     $("#post-submit").on("click", function(event) {
       event.preventDefault();
@@ -42,7 +41,7 @@ $.get("/api/all", function(data) {
           var row = $("<div>");
           row.addClass("post");
     
-          row.append("<p>" + newPost.author + " posted: </p>");
+          row.append("<p>" + newPost.author + " data: </p>");
           row.append("<p>" + newPost.body + "</p>");
           row.append("<p>At " + moment(newPost.created_at).format("h:mma on dddd") + "</p>");
     

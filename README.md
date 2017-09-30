@@ -25,8 +25,11 @@
 
 11. Then I am using jQuery to make an ajax request, which on success, will append our data into the console, and onto the page in my post-box.
 
-12. Now my problem is that on refresh, my data which is appending to the page and the console, disappears. That is why I will need to make a get request that will pull the data when I visit the page again and display it. I add this in post.js.
+12. Now my problem is that on refresh, my data which is appending to the page and the console, disappears. I will need to figure out how the session storage works in this application. Since i don't fully understand the requirements for storage (how the code in the url works), I email Josh to get an answer, and in the meantime work on the CSS.
 
+13. Added a nice wine red and pretty font for the app. (CSS + Google Fonts)
+
+14. Ran into a problem with mysql persisting data on refresh, which is an essential part of this app, so switched to using sequelize.
 
 
 

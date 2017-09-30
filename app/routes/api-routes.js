@@ -1,34 +1,38 @@
+// *********************************************************************************
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// *********************************************************************************
+
 // Dependencies
 // =============================================================
-var connection = require("../config/connection.js");
+var Post = require("../models/post.js");
 
 
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   app.get("/api/all", function(req, res) {
 
-    var dbQuery = "SELECT * FROM post";
-
-    connection.query(dbQuery, function(err, result) {
-      res.json(result);
+    Post.findAll({}).then(function(results) {
+      // results are available to us inside the .then
+      res.json(results);
     });
 
   });
 
-app.post("/api/new", function(req, res) {
-    
-        console.log("Post Data:");
-        console.log(req.body);
-    
-        var dbQuery = "INSERT INTO post (author, body, created_at) VALUES (?,?,?)";
-    
-        connection.query(dbQuery, [req.body.id, req.body.author, req.body.body, req.body.created_at], function(err, result) {
-          console.log("Post Successfully Saved!");
-          res.end();
-        });
-    
-      });
-    
-    };
+  // Add a chirp
+  app.post("/api/new", function(req, res) {
+
+    console.log("Post Data:");
+    console.log(req.body);
+
+    Post.create({
+      author: req.body.author,
+      body: req.body.body,
+      created_at: req.body.created_at
+    }).then(function(results) {
+      res.end();
+    });
+
+  });
+
+};
