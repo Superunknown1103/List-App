@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 var Post = require("../models/post.js");
-
+var code = require("../public/js/code.js")
 
 // Routes
 // =============================================================
@@ -19,6 +19,10 @@ module.exports = function(app) {
 
   });
 
+  app.get('/', function(req, res){
+    res({});
+  });
+
   
   app.post("/api/new", function(req, res) {
 
@@ -28,7 +32,8 @@ module.exports = function(app) {
     Post.create({
       author: req.body.author,
       body: req.body.body,
-      created_at: req.body.created_at
+      created_at: req.body.created_at,
+      code: genhexcode
     }).then(function(results) {
       res.end();
     });

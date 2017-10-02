@@ -7,6 +7,9 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 var Post = sequelize.define("post", {
+    code: {
+    type: Sequelize.TEXT
+    },
   author: {
     type: Sequelize.TEXT
   },

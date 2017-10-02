@@ -1,3 +1,4 @@
+$(document).ready(function () {
    // When the page loads, grab and display all of our posts
 $.get("/api/all", function(data) {
     
@@ -9,7 +10,7 @@ $.get("/api/all", function(data) {
           row.addClass("post");
     
           row.append("<p>" + data[i].author + " data: </p>");
-          row.append("<p>data:" + data[i].body + "</p>");
+          row.append("<p>" + data[i].body + "</p>");
           row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
     
           $("#post-area").prepend(row);
@@ -54,5 +55,30 @@ $.get("/api/all", function(data) {
       $("#post-box").val("");
     });
 
+    // Random Hexadecimal code generation
+// =============================================================
+$(document).ready(function () {
+$("#hexgenerate").on('click', function hexgenerate() {
+    event.preventDefault();
+    var codeString = randomString(32, '0123456789abcdef');
+    console.log(codeString);
+    // printing of generated code 
+    $("#hexcode").html(codeString);
+    $("#hexcode2").html("Please save your generated code: " + codeString);
+    // closing of modal
+    $('#id01').hide();
+    // function to produce randomString
+    function randomString(length, chars) {
+      var result = '';
+      for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+      return result;
+    };
+  });
+// this is the instance where a hex code has been generated for the user
+  let genhexcode = $("#hexcode");
+  });
+
+  module.exports = code;
+});
     
     
