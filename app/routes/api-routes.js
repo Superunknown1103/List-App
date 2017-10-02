@@ -5,7 +5,6 @@
 // Dependencies
 // =============================================================
 var Post = require("../models/post.js");
-var code = require("../public/js/code.js")
 
 // Routes
 // =============================================================
@@ -33,7 +32,6 @@ module.exports = function(app) {
       author: req.body.author,
       body: req.body.body,
       created_at: req.body.created_at,
-      code: genhexcode
     }).then(function(results) {
       res.end();
     });

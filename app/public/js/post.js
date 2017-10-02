@@ -1,4 +1,5 @@
 $(document).ready(function () {
+ 
    // When the page loads, grab and display all of our posts
 $.get("/api/all", function(data) {
     
@@ -29,7 +30,8 @@ $.get("/api/all", function(data) {
       var newPost = {
         author: $("#author").val().trim(),
         body: $("#post-box").val().trim(),
-        created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+        created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
+        code: window.hexcode
       };
     
       console.log(newPost);
@@ -64,7 +66,6 @@ $("#hexgenerate").on('click', function hexgenerate() {
     console.log(codeString);
     // printing of generated code 
     $("#hexcode").html(codeString);
-    $("#hexcode2").html("Please save your generated code: " + codeString);
     // closing of modal
     $('#id01').hide();
     // function to produce randomString
@@ -73,12 +74,10 @@ $("#hexgenerate").on('click', function hexgenerate() {
       for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
       return result;
     };
+    window.hexcode = $("#hexcode").html();
+    console.log(hexcode);
   });
-// this is the instance where a hex code has been generated for the user
-  let genhexcode = $("#hexcode");
   });
-
-  module.exports = code;
 });
     
     
