@@ -11,7 +11,11 @@ var Post = require("../models/post.js");
 module.exports = function(app) {
   app.get("/api/all", function(req, res) {
 
-    Post.findAll({}).then(function(results) {
+    Post.findAll({
+      // where: {
+      //   code: window.hexcode
+      // }
+    }).then(function(results) {
       // results are available to us inside the .then
       res.json(results);
     });
@@ -32,6 +36,7 @@ module.exports = function(app) {
       author: req.body.author,
       body: req.body.body,
       created_at: req.body.created_at,
+      code: req.body.code
     }).then(function(results) {
       res.end();
     });

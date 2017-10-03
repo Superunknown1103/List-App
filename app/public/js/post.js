@@ -74,9 +74,16 @@ $("#hexgenerate").on('click', function hexgenerate() {
       for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
       return result;
     };
-    window.hexcode = $("#hexcode").html();
-    console.log(hexcode);
+    window.hexcode = $("#hexcode").html().val();
+    // console.log(window.hexcode);
   });
+  });
+  // Function for grabbing an existing code
+  $("#loginSubmit").on("click", function send() {
+  let oldcode =   $("#loginCode").val().trim();
+  $("#hexcode").html(oldcode);
+  console.log(oldcode);
+  window.hexcode = $("#hexcode").html();
   });
 });
     
