@@ -1,27 +1,5 @@
+
 $(document).ready(function () {
- 
-   // When the page loads, grab and display all of our posts
-$.get("/api/all", function(data) {
-    
-      if (data.length !== 0) {
-    
-        for (var i = 0; i < data.length; i++) {
-    
-          var row = $("<div>");
-          row.addClass("post");
-    
-          row.append("<p>" + data[i].author + " data: </p>");
-          row.append("<p>" + data[i].body + "</p>");
-          row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-    
-          $("#post-area").prepend(row);
-    
-        }
-    
-      }
-    
-    });
-    
    // When user posts (clicks addBtn)
     $("#post-submit").on("click", function(event) {
       event.preventDefault();
@@ -31,7 +9,7 @@ $.get("/api/all", function(data) {
         author: $("#author").val().trim(),
         body: $("#post-box").val().trim(),
         created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
-        code: window.hexcode
+        code: $("#hexcode").html(),
       };
     
       console.log(newPost);
@@ -74,17 +52,41 @@ $("#hexgenerate").on('click', function hexgenerate() {
       for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
       return result;
     };
-    window.hexcode = $("#hexcode").html().val();
+    window.hexcode = $("#hexcode").html();
     // console.log(window.hexcode);
   });
   });
   // Function for grabbing an existing code
   $("#loginSubmit").on("click", function send() {
+
   let oldcode =   $("#loginCode").val().trim();
   $("#hexcode").html(oldcode);
   console.log(oldcode);
   window.hexcode = $("#hexcode").html();
+
+$.get("/api/all", function(data) {
+    
+      if (data.length !== 0) {
+    
+        for (var i = 0; i < data.length; i++) {
+    
+          var row = $("<div>");
+          row.addClass("post");
+    
+          row.append("<p>" + data[i].author + " data: </p>");
+          row.append("<p>" + data[i].body + "</p>");
+          row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+    
+          $("#post-area").prepend(row);
+    
+        }
+  
+      }
+    
+    });
+    Hex = window.hexcode;
   });
+    
 });
-    
-    
+
+module.exports = Hex;

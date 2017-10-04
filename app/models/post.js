@@ -22,7 +22,6 @@ var Post = sequelize.define("post", {
 }, {
   timestamps: false
 });
-
 // Syncs with DB
 Post.sync();
 

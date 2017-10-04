@@ -33,6 +33,8 @@
 
 15. Time to learn how to use query strings to save sessions in the URL. After some research, I can see that this is generally done using PHP. Rather than spending my time learning more PHP (as I am quite a noob at it), I decided to write some JavaScript for the code, allowing the user to enter a previous code or have a 32 digit hex code generated for them.
 
+16. 
+
 
 
 
