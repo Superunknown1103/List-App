@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+  $('#id01').show();
    // When user posts (clicks addBtn)
     $("#post-submit").on("click", function(event) {
       event.preventDefault();
@@ -37,7 +38,6 @@ $(document).ready(function () {
 
     // Random Hexadecimal code generation
 // =============================================================
-$(document).ready(function () {
 $("#hexgenerate").on('click', function hexgenerate() {
     event.preventDefault();
     var codeString = randomString(32, '0123456789abcdef');
@@ -52,7 +52,7 @@ $("#hexgenerate").on('click', function hexgenerate() {
       for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
       return result;
     };
-    window.hexcode = $("#hexcode").html();
+    // window.hexcode = $("#hexcode").html();
     // console.log(window.hexcode);
   });
   });
@@ -63,8 +63,9 @@ $("#hexgenerate").on('click', function hexgenerate() {
   $("#hexcode").html(oldcode);
   console.log(oldcode);
   window.hexcode = $("#hexcode").html();
+  Hex = window.hexcode;
 
-$.get("/api/all", function(data) {
+$.get("/api/" + Hex, function(data) {
     
       if (data.length !== 0) {
     
@@ -84,9 +85,6 @@ $.get("/api/all", function(data) {
       }
     
     });
-    Hex = window.hexcode;
   });
-    
-});
 
-module.exports = Hex;
+Hex = window.hexcode;

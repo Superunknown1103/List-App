@@ -6,7 +6,6 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var cheerio = require("cheerio");
 
 // Sets up the Express App
 // =============================================================
