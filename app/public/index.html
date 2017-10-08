@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="UTF-8">
-    <title>Temporarily Removing Title</title>
+    <meta charset="UTF-16">
+    <title>This List</title>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
@@ -34,26 +34,27 @@
                                     
                                 <div class="modalContainer">
                                 <div class="radio">
-                                  <div>Welcome to the App!</div>
+                                  <div id="welcome">Welcome to the App!</div>
                                 <input id="loginCode" placeholder="Enter a session code" name="code">
                                 <button class="hexbtn" id="hexgenerate">Generate a new code for me</button>
-                                </div>
                                     
                                 <button class="modalButton" id="loginSubmit" type="submit">Login</button>
+                              </div>
+                              
                                  </div>
                                 </div>
                                     
                                 </form>
                                 </div>
     <div class="jumbotron">
-      <h1 class="text-center">Temporarily Removing Title</h1>
+      <h1 class="text-center">This List</h1>
     </div>
   
     <div class="container">
         <div id="nameBox"></div>
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div>Please save your generated code: </div><span id="hexcode"></span>
+            <div class="cool-font2">To return to this list, please save your generated code:  <span id="hexcode"></span></div>
           <p class="cool-font">Title</p>
           <input class="form-control" type="text" id="author" placeholder="Add a Title">
           <br>
@@ -81,8 +82,7 @@
                     $('#id01').hide();
           });
       });
-</script>     
-<!-- Native JS Files -->
-<script type="text/javascript" src="js/post.js"></script> 
+</script>
+<script type="text/javascript" src="js/post.js"></script>     
   </body>
 </html>

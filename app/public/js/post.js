@@ -36,6 +36,23 @@ $(document).ready(function () {
       $("#post-box").val("");
     });
 
+    function hexgenerate() {
+      var codeString = randomString(32, '0123456789abcdef');
+      console.log(codeString);
+      // printing of generated code 
+      $("#hexcode").html(codeString);
+      // closing of modal
+      $('#id01').hide();
+      // function to produce randomString
+      function randomString(length, chars) {
+        var result = '';
+        for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+        return result;
+      };
+      // window.hexcode = $("#hexcode").html();
+      // console.log(window.hexcode);
+    };
+
     // Random Hexadecimal code generation
 // =============================================================
 $("#hexgenerate").on('click', function hexgenerate() {
@@ -56,6 +73,16 @@ $("#hexgenerate").on('click', function hexgenerate() {
     // console.log(window.hexcode);
   });
   });
+  // Function for ?code= parameter grabbing existing code 
+  function oldcode(){
+  $("#hexcode").html(oldcode);
+  // closing of modal
+  $('#id01').hide();
+  console.log(oldcode);
+  window.hexcode = $("#hexcode").html();
+  Hex = window.hexcode;
+  };
+
   // Function for grabbing an existing code
   $("#loginSubmit").on("click", function send() {
 
@@ -77,6 +104,7 @@ $.get("/api/" + Hex, function(data) {
           row.append("<p>" + data[i].author + " data: </p>");
           row.append("<p>" + data[i].body + "</p>");
           row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+          row.append("<span class='close' title='Close Modal'>&times;</span>");
     
           $("#post-area").prepend(row);
     

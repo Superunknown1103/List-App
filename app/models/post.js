@@ -18,7 +18,7 @@ var Post = sequelize.define("post", {
   },
   created_at: {
     type: Sequelize.DATE
-  }
+  }, 
 }, {
   timestamps: false
 });

@@ -4,6 +4,7 @@
 // Dependencies
 // =============================================================
 var Post = require("../models/post.js");
+var path = require('path');
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -21,9 +22,9 @@ module.exports = function(app) {
 
   });
 
-  app.get('/', function(req, res){
-    res({});
-  });
+  // app.get('/', function(req, res){
+  //   res({});
+  //   });
   
   app.post("/api/new", function(req, res) {
 
