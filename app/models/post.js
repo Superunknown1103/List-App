@@ -2,11 +2,11 @@
 // =============================================================
 
 // This may be confusing but here Sequelize (capital) references the standard library
-const Sequelize = require("sequelize");
+var Sequelize = require("sequelize");
 // sequelize (lowercase) references our connection to the DB.
-const sequelize = require("../config/connection.js");
+var sequelize = require("../config/connection.js");
 
-const Post = sequelize.define("post", {
+var Post = sequelize.define("post", {
     code: {
     type: Sequelize.STRING
     },
