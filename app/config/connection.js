@@ -15,6 +15,15 @@ var sequelize = new Sequelize("posts", "root", "root", {
   }
 });
 
+sequelize
+.authenticate()
+.then(() => {
+  console.log('Connection has been established successfully.');
+})
+.catch(err => {
+  console.error('Unable to connect to the database:', err);
+});
+
 
 // Exports the connection for other files to use
 module.exports = sequelize;
