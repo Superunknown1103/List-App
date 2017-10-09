@@ -1,5 +1,8 @@
-
 $(document).ready(function () {
+  if (code !== null){
+    console.log(code);
+    $('#id01').style.visibility = "hidden";
+  }
   $('#id01').show();
    // When user posts (clicks addBtn)
     $("#post-submit").on("click", function(event) {

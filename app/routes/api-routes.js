@@ -3,8 +3,8 @@
 // *********************************************************************************
 // Dependencies
 // =============================================================
-var Post = require("../models/post.js");
-var path = require('path');
+const Post = require("../models/post.js");
+const path = require('path');
 // Routes
 // =============================================================
 module.exports = function(app) {

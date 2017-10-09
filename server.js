@@ -4,12 +4,12 @@
 
 // Dependencies
 // =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-
+const express = require("express");
+const bodyParser = require("body-parser");
+const session = require("express-session");
 // Sets up the Express App
 // =============================================================
-var app = express();
+const app = express();
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing

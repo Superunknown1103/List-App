@@ -1,13 +1,13 @@
 var path = require('path');
 var bodyParser = require("body-parser");
-
-module.exports = function(app){
+module.exports = function(app) {
 // // // handles ?code= parameter in the URL
 app.get('/a', function(req, res){
      var code = req.query.code;
+     var sessionData = req.session;
     if(code) {
-        console.log(code);
-    } else if (!code){
+        sessionData.code = code;
+    } else if (!sessionData.code){
     }
     // Post.findAll({
     //   where: {
