@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS `posts`;
 CREATE DATABASE `posts`;
+
+USE posts;
