@@ -4,7 +4,6 @@
   "description": "Takes posts into a database then brings them back and saves them.",
   "main": "server.js",
   "scripts": {
-    "postinstall": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
