@@ -4,6 +4,7 @@
   "description": "Takes posts into a database then brings them back and saves them.",
   "main": "server.js",
   "scripts": {
+    "postinstall": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +19,8 @@
     "jsdom": "^11.3.0",
     "mysql": "^2.12.0",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.13.0"
+    "sequelize": "^4.13.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }
