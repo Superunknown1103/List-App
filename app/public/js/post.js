@@ -15,8 +15,8 @@ $(document).ready(function () {
       console.log(newPost);
     
       // Send an AJAX POST-request with jQuery
-      var currentURL = window.location.origin;
-      $.post(currentURL + "/api/new", newPost)
+      
+      $.post("/api/new", newPost)
       
         // On success, run the following code
         .done(function() {
