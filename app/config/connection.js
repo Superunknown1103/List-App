@@ -3,8 +3,6 @@
 // *********************************************************************************
 
 // Dependencies
-var sql = require('mysql');
-
 var Sequelize = require("sequelize");
 // Creates mySQL connection using Sequelize
 var sequelize = new Sequelize("posts", "root", "root", {
