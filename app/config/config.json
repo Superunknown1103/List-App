@@ -14,12 +14,12 @@
       "dialect": "postgres"
     },
     "production": {
-      "username": "root",
-      "password": "root",
+      "use_env_variable": "DATABASE_URL",
+      "username": "superunknown1103@gmail.com",
+      "password": "Superman1103",
       "database": "posts",
-      "host": "127.0.0.1",
-      "dialect": "postgres",
-      "pg":"^6.1.0"
+      "host": "secret-atoll-70142.herokuapp.com",
+      "dialect": "postgres"
     }
   }
   
