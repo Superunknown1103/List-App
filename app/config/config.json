@@ -4,21 +4,21 @@
       "password": "root",
       "database": "posts",
       "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "postgres"
     },
     "test": {
       "username": "root",
       "password": "root",
       "database": "posts",
       "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "postgres"
     },
     "production": {
       "username": "root",
       "password": "root",
       "database": "posts",
       "host": "127.0.0.1",
-      "dialect": "mysql",
+      "dialect": "postgres",
       "pg":"^6.1.0"
     }
   }
