@@ -41,5 +41,23 @@ module.exports = function(app) {
     });
   });
 
+  
+app.get("/api/new", function(req, res) {
+  
+      console.log("Post Data:");
+      console.log(req.body);
+  
+      Post.create({
+        author: req.body.author,
+        body: req.body.body,
+        created_at: req.body.created_at,
+        code: req.body.code
+      }).then(function(results) {
+        res.end();
+      });
+    });
+
 };
+
+
 
