@@ -2,24 +2,18 @@
     "development": {
       "username": "root",
       "password": "root",
-      "database": "posts",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
+      "host": "127.0.0.1"
     },
     "test": {
       "username": "root",
       "password": "root",
-      "database": "posts",
-      "host": "127.0.0.1",
-      "dialect": "postgres"
+      "host": "127.0.0.1"
     },
     "production": {
       "use_env_variable": "DATABASE_URL",
       "username": "superunknown1103@gmail.com",
       "password": "Superman1103",
-      "database": "posts",
-      "host": "secret-atoll-70142.herokuapp.com",
-      "dialect": "postgres"
+      "host": "secret-atoll-70142.herokuapp.com"
     }
   }
   
