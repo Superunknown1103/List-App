@@ -24,7 +24,7 @@ $(document).ready(function () {
           var row = $("<div>");
           row.addClass("post");
     
-          row.append("<p>" + newPost.author + " data: </p>");
+          row.append("<p>" + newPost.author + " Entry: </p>");
           row.append("<p>" + newPost.body + "</p>");
           row.append("<p>At " + moment(newPost.created_at).format("h:mma on dddd") + "</p>");
     
@@ -102,7 +102,7 @@ $.get("/api/" + Hex, function(data) {
           var row = $("<div>");
           row.addClass("post");
     
-          row.append("<p>" + data[i].author + " data: </p>");
+          row.append("<p>" + data[i].author + " Entry: </p>");
           row.append("<p>" + data[i].body + "</p>");
           row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
           row.append("<span class='close' title='Close Modal'>&times;</span>");
